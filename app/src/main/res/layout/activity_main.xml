@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/mainTitleCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        app:cardCornerRadius="7dp"
+        app:cardElevation="6dp">
+
+       <TextView
+           android:id = "@+id/mainTitleTxt"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:text="@string/app_title"
+           android:gravity="center"
+           android:textSize="8pt"
+           android:height="20pt"
+           android:background="@color/orange"
+           android:textStyle="bold"
+           android:textColor="@color/yellow"
+           >
+
+       </TextView>
+
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/homeTeamCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        app:cardCornerRadius="7dp"
+        app:cardElevation="6dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/homeLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:height="80px"
+                android:background="@color/darkBlue"
+                android:gravity="center"
+                android:text="Home Team"
+                android:textColor="@color/softYellow"
+                android:textStyle="bold"></TextView>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/homeLabel"
+                android:background="@color/blue"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <EditText
+                        android:id="@+id/homeTeam"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:hint="Enter home team name"
+                        android:inputType="text"
+                        android:text=""
+
+                        ></EditText>
+
+                    <ImageButton
+                        android:id="@+id/homeImage"
+                        android:layout_width="300px"
+                        android:layout_height="300px"
+                        android:layout_gravity="center"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitCenter"
+                        android:background="@android:color/transparent"
+                        android:src="@drawable/teamlogo">
+
+                    </ImageButton>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="20px">
+
+                        <TextView
+                            android:id="@+id/homePlayerNumber"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity=""
+                            android:text="0 player(s)"
+                            android:textColor="@color/white"
+                            android:textStyle="bold"
+                            android:padding="10px"
+                            android:layout_centerInParent="true"
+                            >
+
+                        </TextView>
+
+
+                        <ImageButton
+                            android:id="@+id/addHomePlayer"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_alignParentEnd="true"
+                            android:scaleType="fitEnd"
+                            android:background="@android:color/transparent"
+                            android:src="@drawable/icon_add_button">
+
+                        </ImageButton>
+
+                    </RelativeLayout>
+                </LinearLayout>
+                <ListView
+                    android:id= "@+id/homePlayer"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:dividerHeight="1dp"
+                    android:padding="10px"
+                    android:background="@color/youngBlue">
+
+                </ListView>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/awayTeamCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        app:cardCornerRadius="7dp"
+        app:cardElevation="6dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/awayLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:height="80px"
+                android:background="@color/darkGreen"
+                android:gravity="center"
+                android:text="Away Team"
+                android:textColor="@color/softYellow"
+                android:textStyle="bold"></TextView>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/awayLabel"
+                android:background="@color/green"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <EditText
+                        android:id="@+id/awayTeam"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:hint="Enter away team name"
+                        android:inputType="text"
+                        android:text=""
+
+                        ></EditText>
+
+                    <ImageButton
+                        android:id="@+id/awayImage"
+                        android:layout_width="300px"
+                        android:layout_height="300px"
+                        android:layout_gravity="center"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitCenter"
+                        android:background="@android:color/transparent"
+                        android:src="@drawable/teamlogo">
+
+                    </ImageButton>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="20px">
+
+                        <TextView
+                            android:id="@+id/awayPlayerNumber"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity=""
+                            android:text="0 player(s)"
+                            android:textColor="@color/white"
+                            android:textStyle="bold"
+                            android:padding="10px"
+                            android:layout_centerInParent="true"
+                            >
+
+                        </TextView>
+
+
+                        <ImageButton
+                            android:id="@+id/addAwayPlayer"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_alignParentStart="false"
+                            android:layout_alignParentEnd="true"
+                            android:scaleType="fitEnd"
+                            android:background="@android:color/transparent"
+                            android:src="@drawable/icon_add_button">
+
+                        </ImageButton>
+
+                    </RelativeLayout>
+                </LinearLayout>
+                <ListView
+                    android:id= "@+id/awayPlayer"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:dividerHeight="1dp"
+                    android:padding="10px"
+                    android:background="@color/youngGreen"
+                    >
+
+                </ListView>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20px"
+            app:cardCornerRadius="10px">
+
+            <Button
+                android:id="@+id/startBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#ff3333"
+                android:drawableLeft="@drawable/icon_next"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:text="Next" >
+            </Button>
+        </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+
+
+
+
+
+</LinearLayout>

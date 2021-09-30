@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Soccer Match</string>
+    <string name="app_title">APLAS SOCCER BOARD</string>
+    <string name="home_team">HOME TEAM</string>
+</resources>
